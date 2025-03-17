@@ -14,7 +14,7 @@
   --margin-in-st-common: 10px;
   --margin-in-end-common: 10px;
   --margin-bl-end-page: 40px;
-  --margin-bl-end-main: 50px;
+  --margin-bl-end-main: 47px;
   --hover-color: rgba(50, 49, 45, 0.4);
   --card-text-color: rgba(53, 52, 48, 1);
 }
@@ -44,7 +44,7 @@
     --margin-in-st-common: 10px;
     --margin-in-end-common: 10px;
     --margin-bl-end-page: 40px;
-    --margin-bl-end-main: 50px;
+    --margin-bl-end-main: 47px;
     --hover-color: rgba(50, 49, 45, 0.4);
     --card-text-color: rgba(53, 52, 48, 1);
   }
