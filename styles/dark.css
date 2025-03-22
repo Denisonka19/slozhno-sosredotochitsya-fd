@@ -1,15 +1,9 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
   --accent-color: rgba(255, 0, 112, 1);
+  --decor-color: rgba(255, 0, 112, 1);
   --main-font: 'IBM Plex mono', sans-serif;
-  --page-bg-img: url(../images/cover-image.png);
+  --page-bg-img: url(../images/cover-image-dark.png);
   --page-bg-color: rgba(0, 0, 40, 1);
-  --bg-img: url(../images/cover-image-dark.png);
   --main-font-sz: 18px;
   --main-font-wght: 400;
   --title-font-wght: 700;
@@ -19,21 +13,76 @@
   --margin-in-st-common: 10px;
   --margin-in-end-common: 10px;
   --margin-bl-end-page: 40px;
-  --margin-bl-end-main: 47px;
+  --margin-bl-end-main: 50px;
   --hover-color: rgba(255, 0, 112, 0.4);
   --card-text-color: rgba(241, 178, 206, 1);
 }
 
-@media (width >= 768px) {
-  :root.theme-dark {
-    --margin-in-st-common: 20px;
-    --margin-in-end-common: 20px;
-    --title-font-mob: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --margin-bl-end-page: 60px;
-    --margin-bl-end-main: 80px;
-  }
+.theme-dark .header_decoration-text {
+  position: absolute;
+  font-weight: var(--main-font-wght);
+  line-height: 25px;
+  color: var(--accent-color);
+  justify-self: end;
+  top: 10px;
+  right: 38px;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-}
+.theme-dark .header_decoration-text::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  top: 8px;
+  right: -19px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  border-radius: 50%;
+  }
+
+  @media (width >= 768px) {
+    :root.theme-dark {
+      --margin-in-st-common: 20px;
+      --margin-in-end-common: 20px;
+      --title-font-mob: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      --margin-bl-end-page: 60px;
+      --margin-bl-end-main: 80px;
+    }
+
+    .theme-dark .header_decoration-text {
+      top: 20px;
+      right: 48px;
+    }
+  }
+
+@media (prefers-color-scheme: dark) {
+  .header_decoration-text {
+    position: absolute;
+    font-weight: var(--main-font-wght);
+    line-height: 25px;
+    color: var(--accent-color);
+    justify-self: end;
+    top: 10px;
+    right: 38px;
+  }
+  
+  .header_decoration-text::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 8px;
+    right: -19px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 0px 4px 2px var(--accent-color);
+    border-radius: 50%;
+    }
+
+    @media (width >= 768px) {
+      .header_decoration-text {
+        top: 20px;
+        right: 48px;
+      }
+   }
+  }
+

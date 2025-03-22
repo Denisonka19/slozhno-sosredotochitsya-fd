@@ -1,5 +1,3 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   min-inline-size: 360px;
   background-color: var(--page-bg-color);
@@ -16,12 +14,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
-  background-image: var(--bg-img);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   position: relative;
-  min-block-size: 100%;
+  min-block-size: 668px;
+  block-size: 100vh;
   margin-block-end: var(--margin-bl-end-page);
 }
 
@@ -57,13 +52,13 @@
   right: 38px;
 }
 
-.header__theme-menu::before {
+.header_decoration-text::after {
   content: "";
   position: absolute;
   width: 9px;
   height: 9px;
-  top: 18px;
-  right: 19px;
+  top: 8px;
+  right: -19px;
   background-color: var(--accent-color);
   box-shadow: 0px 0px 4px 2px var(--accent-color);
   border-radius: 50%;
@@ -74,11 +69,12 @@
   }
 
   .header__theme-menu-list {
+    align-items: center;
+    justify-self: end;
     margin-block-start: 75px;
     margin-inline-end: var(--margin-in-end-common);
     display: flex;
     flex-direction: column;
-    justify-self: end;
     gap: 12px;
   }
 
@@ -128,6 +124,7 @@
   }
 
   .header_paragraph {
+    justify-self: center;
     margin-inline-start: var(--margin-in-st-common);
     margin-inline-end: var(--margin-in-end-common);
     margin-block-start: 55px;
@@ -139,20 +136,27 @@
     font-family: var(--main-font);
     font-weight: var(--title-font-wght);
     font-size: var(--main-font-sz);
-    line-height: 24px;
+    line-height: 23px;
   }
 
-  .description {
+  .section {
     margin-inline-start: var(--margin-in-st-common);
     margin-inline-end: var(--margin-in-end-common);
   }
 
-  .why {
+  .content-section {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, min-content);
-    gap: 18px;
+    gap: 19px;
     margin-block-end: var(--margin-bl-end-main);
+  }
+
+  .section_card {
+    display: flex;
+    flex-direction: column;
+    gap: 10.8px;
+    flex-wrap: wrap;
   }
 
   .section_title {
@@ -163,15 +167,11 @@
     color: var(--decor-color);
   }
 
-  .card-title {
-    margin-block-end: 10px;
-  }
-
   .card-text {
     font-family: var(--main-font);
     font-weight: var(--main-font-wght);
     font-size: var(--main-font-sz);
-    line-height: 23.5px;
+    line-height: 23.4px;
     color: var(--card-text-color);
   }
 
@@ -195,32 +195,22 @@
     outline: 1px solid var(--card-text-color);
   }
 
-  .what {
+  .content-section_cards {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, min-content);
-    gap: 18px;
-    margin-block-end: var(--margin-bl-end-main);
-  }
-
-  .how {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fit, min-content);
-    gap: 18px;
-    margin-block-end: var(--margin-bl-end-main);
+    gap: 19px;
   }
 
   .how-title {
     font-weight: var(--main-font-wght);
-    margin-block-end: 10px;
   }
 
   .how-add-title {
-    margin-block-end: 20px;
+    margin-block-end: 10px;
   }
 
-  .pictures {
+  .section-pictures {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, min-content);
@@ -236,7 +226,8 @@
   }
 
   .footer {
-    min-block-size: 100%;
+    min-block-size: 668px;
+    block-size: 100vh;
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -269,11 +260,6 @@
       top: 20px;
       right: 48px;
     }
-    
-    .header__theme-menu::before {
-      top: 28px;
-      right: 29px;
-    }
 
     .header {
       grid-template-columns: 1fr 1fr;
@@ -289,6 +275,7 @@
 
     .header_title {
       grid-column: span 2;
+      margin-inline-start: 0;
     }
 
     .header_paragraph {
@@ -297,67 +284,35 @@
       margin-inline-start: 0;
     }
 
-    .why {
-      grid-template-columns: 1fr 1fr 1fr;
+    .content-section {
+      grid-template-columns: 1fr 2fr;
     }
 
-    .why_multitask {
-      grid-column: span 2;
+    .section-why_cards {
+      grid-column: 2;
     }
 
-    .why_dopamine {
-      grid-column: 2/4;
-    }
-
-    .what {
-      grid-template-columns: 1fr 1fr 1fr;
+    .section-what_cards {
+      grid-column: span 3;
     }
 
     .what_multitask {
-      grid-row: 2;
       grid-column: span 3;
     }
 
     .what_food {
-      grid-row: 3;
       grid-column: span 3;
     }
 
     .what_gadgets {
-      grid-row: 4;
       grid-column: span 3;
     }
 
-    .how {
-      grid-template-columns: 1fr 2fr;
-    }
-
-    .how_imagine {
+    .section-how_cards {
       grid-column: 2;
-      grid-row: 1;
     }
 
-    .how_play {
-      grid-column: 2;
-      grid-row: 2;
-    }
-
-    .how_walk {
-      grid-column: 2;
-      grid-row: 3;
-    }
-
-    .how_eat {
-      grid-column: 2;
-      grid-row: 4;
-    }
-
-    .how_read {
-      grid-column: 2;
-      grid-row: 5;
-    }
-
-    .pictures {
+    .section-pictures {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
     }
@@ -391,7 +346,6 @@
       grid-column: 2/4;
       grid-row: 4/6;
     }
-
   }
 
   @media (width >= 1024px) {
@@ -406,22 +360,24 @@
       margin-block-start: 114px;
     }
 
+    .content-section {
+      grid-template-columns: 1fr 2.06fr;
+    }
+   
+    .section-what_cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .what_multitask {
-      grid-row: 2;
       grid-column: span 1;
     }
 
     .what_food {
-      grid-row: 2;
       grid-column: span 1;
     }
 
     .what_gadgets {
-      grid-row: 2;
       grid-column: span 1;
     }
   }
-
-
-
 

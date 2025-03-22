@@ -1,15 +1,9 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
-/* Файл variables.css */
 :root {
   --accent-color: rgba(255, 0, 112, 1);
   --decor-color: rgba(255, 0, 112, 1);
   --main-font: 'IBM Plex mono', sans-serif;
-  --page-bg-img: url(../images/cover-image.png);
+  --page-bg-img: url(../images/cover-image-dark.png);
   --page-bg-color: rgba(0, 0, 40, 1);
-  --bg-img: url(../images/cover-image-dark.png);
   --main-font-sz: 18px;
   --main-font-wght: 400;
   --title-font-wght: 700;
@@ -19,7 +13,7 @@
   --margin-in-st-common: 10px;
   --margin-in-end-common: 10px;
   --margin-bl-end-page: 40px;
-  --margin-bl-end-main: 47px;
+  --margin-bl-end-main: 50px;
   --hover-color: rgba(255, 0, 112, 0.4);
   --card-text-color: rgba(241, 178, 206, 1);
 }

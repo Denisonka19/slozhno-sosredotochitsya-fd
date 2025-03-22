@@ -2,19 +2,18 @@
   --accent-color: rgba(255, 141, 203, 1);
   --decor-color: rgba(53, 52, 48, 1);
   --main-font: 'IBM Plex mono', sans-serif;
-  --page-bg-img: none;
   --page-bg-color: rgba(255, 241, 247, 1);
-  --bg-img: url(../images/cover-image-light.png);
+  --page-bg-img: url(../images/cover-image-light.png);
   --main-font-sz: 18px;
   --main-font-wght: 400;
   --title-font-wght: 700;
   --title-font-sz: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --title-accent-color: rgba(255, 194, 230, 1);
-  --title-decor-color: rgba(0, 0, 40, 1);
+  --title-decor-color: rgba(53, 52, 48, 1);
   --margin-in-st-common: 10px;
   --margin-in-end-common: 10px;
   --margin-bl-end-page: 40px;
-  --margin-bl-end-main: 47px;
+  --margin-bl-end-main: 50px;
   --hover-color: rgba(50, 49, 45, 0.4);
   --card-text-color: rgba(53, 52, 48, 1);
 }
@@ -23,43 +22,52 @@
   display: none;
 }
 
-.theme-light .header__theme-menu::before {
+.theme-light .header_decoration-text::after {
   display: none;
 }
 
-@media (prefers-color-scheme: light) {
+@media (width >= 768px) {
   :root.theme-light {
+    --margin-in-st-common: 20px;
+    --margin-in-end-common: 20px;
+    --title-font-sz: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --margin-bl-end-page: 60px;
+    --margin-bl-end-main: 80px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
     --accent-color: rgba(255, 141, 203, 1);
     --decor-color: rgba(53, 52, 48, 1);
     --main-font: 'IBM Plex mono', sans-serif;
-    --page-bg-img: none;
     --page-bg-color: rgba(255, 241, 247, 1);
-    --bg-img: url(../images/cover-image-light.png);
+    --page-bg-img: url(../images/cover-image-light.png);
     --main-font-sz: 18px;
     --main-font-wght: 400;
     --title-font-wght: 700;
     --title-font-sz: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     --title-accent-color: rgba(255, 194, 230, 1);
-    --title-decor-color: rgba(0, 0, 40, 1);
+    --title-decor-color: rgba(53, 52, 48, 1);
     --margin-in-st-common: 10px;
     --margin-in-end-common: 10px;
     --margin-bl-end-page: 40px;
-    --margin-bl-end-main: 47px;
+    --margin-bl-end-main: 50px;
     --hover-color: rgba(50, 49, 45, 0.4);
     --card-text-color: rgba(53, 52, 48, 1);
   }
-  
-  .theme-light .header_decoration-text {
+
+  .header_decoration-text {
     display: none;
   }
   
-  .theme-light .header__theme-menu::before {
+  .header_decoration-text::after {
     display: none;
   }
 }
 
 @media (width >= 768px) {
-  :root.theme-light {
+  :root {
     --margin-in-st-common: 20px;
     --margin-in-end-common: 20px;
     --title-font-sz: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
